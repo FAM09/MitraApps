@@ -15,7 +15,7 @@ struct HomeView: View {
         NavigationView {
             ZStack {
                 VStack(alignment: .center) {
-                    HeaderView(hideLoginButton: true)
+                    HeaderView(hideLoginButton: false)
                     
                     KatalogView(asset: items.item)
                         .padding(.top, -8)
@@ -38,6 +38,9 @@ struct HomeView: View {
         .onAppear{
             self.items.fetchData()
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
