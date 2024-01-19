@@ -30,7 +30,7 @@ struct HomeView: View {
                 
                 SearchFilterSortView()
             }
-            .navigationBarTitle("")
+            .navigationBarTitle("Katalog")
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
         }
@@ -38,9 +38,6 @@ struct HomeView: View {
         .onAppear{
             self.items.fetchData()
         }
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true)
     }
 }
 
